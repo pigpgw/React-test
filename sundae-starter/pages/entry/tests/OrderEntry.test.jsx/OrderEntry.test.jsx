@@ -4,7 +4,7 @@ import { server } from '../../../../mocks/server';
 import { http, HttpResponse } from 'msw';
 import { expect } from 'vitest';
 
-test('d', async () => {
+test('error test with msw', async () => {
     server.resetHandlers(
         http.get('http://localhost:3030/scoops', () => {
             return new HttpResponse(null, { status: 500 });
